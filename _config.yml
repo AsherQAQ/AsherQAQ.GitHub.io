@@ -5,10 +5,10 @@
 # Site
 title: Everyone is a Bag
 subtitle: Never Stop
-description:
+description: 生活 学习 电影
 author: AsherQAQ
-language: cn
-timezone:
+language: zh-Hans
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -72,7 +72,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
