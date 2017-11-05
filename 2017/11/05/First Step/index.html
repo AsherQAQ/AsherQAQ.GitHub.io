@@ -13,13 +13,13 @@
 <meta property="og:site_name" content="Everyone is a Bag">
 <meta property="og:description" content="Hello,World是每个程序员向世界的第一声呐喊">
 <meta property="og:locale" content="cn">
-<meta property="og:image" content="https://github.com/AsherQAQ/AsherQAQ.github.io/blob/master/img/post1-1.png">
-<meta property="og:image" content="https://github.com/AsherQAQ/AsherQAQ.github.io/blob/master/img/post1-2.png">
-<meta property="og:updated_time" content="2017-11-05T10:58:21.790Z">
+<meta property="og:image" content="http://yoursite.com/2017/11/05/First%20Step/AsherQAQ.github.io/img/post1-1.png">
+<meta property="og:image" content="http://yoursite.com/2017/11/05/First%20Step/AsherQAQ.github.io/img/post1-2.png">
+<meta property="og:updated_time" content="2017-11-05T11:52:16.748Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="First Step">
 <meta name="twitter:description" content="Hello,World是每个程序员向世界的第一声呐喊">
-<meta name="twitter:image" content="https://github.com/AsherQAQ/AsherQAQ.github.io/blob/master/img/post1-1.png">
+<meta name="twitter:image" content="http://yoursite.com/2017/11/05/First%20Step/AsherQAQ.github.io/img/post1-1.png">
   
     <link rel="alternate" href="/atom.xml" title="Everyone is a Bag" type="application/atom+xml">
   
@@ -103,11 +103,9 @@
 <p>编写一段程序,为九九乘法表增加横纵标题</p>
 </blockquote>
 <p>然后我开始尝试在没有参考别人的解法的情况下,思考如何实现这一目标.<br>基于自己数学的学习,我首先想到了在for循环语句下,根据对<code>i</code>和<code>j</code>取值的限定,用类似分段函数的办法用if语句实现左上角的空白以及分别在第二行和第二列实现”–”和”|”以将标题和九九乘法表区分开来.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">	int i=1;   </div><div class="line">	int t = 1;</div><div class="line"></div><div class="line">	for (i = 1; i &lt;= 11; i++) &#123;</div><div class="line">		for (t = 1; t &lt;= 11; t++) &#123;</div><div class="line">			if (i == 1 &amp;&amp; t == 1)</div><div class="line">				printf(&quot;   |&quot;);</div><div class="line">			if (i &gt; 2 &amp;&amp; t == 2)</div><div class="line">				printf(&quot;|&quot;);</div><div class="line">			if (i == 2 &amp;&amp; t &gt;= 3)</div><div class="line">				printf(&quot;----&quot;);</div><div class="line"></div><div class="line">			if (i &gt;= 3&amp;&amp;t==1)</div><div class="line">				printf(&quot;%3d&quot;, i - 2);</div><div class="line">			if (i == 1 &amp;&amp; t &gt;= 3)</div><div class="line">				printf(&quot;%3d&quot;, t - 2);</div><div class="line">			if (i &gt;= 3 &amp;&amp; t &gt;= 3)</div><div class="line">				printf(&quot;%3d&quot;, (t - 2)*(i - 2));</div><div class="line">		&#125;</div><div class="line">		printf(&quot;\n&quot;);</div><div class="line"></div><div class="line">	&#125;</div><div class="line">	putchar(&apos;\n&apos;);</div></pre></td></tr></table></figure></p>
-<p>最终实现的效果如下图</p>
-<p><img src="https://github.com/AsherQAQ/AsherQAQ.github.io/blob/master/img/post1-1.png" alt="算法1"></p>
+<p><img src="AsherQAQ.github.io/img/post1-1.png" alt="算法1"><br>最终实现的效果如下图</p>
 <p>在完成之后,我去网上搜索这一题,去看看别人的解法<br>之后找到一个解法看起来比我的好很多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">int a, b;</div><div class="line">	printf(&quot;  |&quot;);</div><div class="line">	for (a = 1; a &lt;= 9; a++) </div><div class="line">		printf(&quot;%3d&quot;, a);</div><div class="line">	putchar(&apos;\n&apos;);/*first line*/</div><div class="line">	for (a = 1; a &lt;= 10; a++)</div><div class="line">		printf(&quot;---&quot;);</div><div class="line">	putchar(&apos;\n&apos;);/*sec line*/</div><div class="line">	for (b = 1; b &lt;= 9; b++) &#123;</div><div class="line">		printf(&quot;%d&quot;, b);</div><div class="line">		printf(&quot; |&quot;);</div><div class="line">		for (a = 1; a &lt;= 9; a++) &#123;</div><div class="line">			printf(&quot;%3d&quot;, b*a);</div><div class="line">		&#125;</div><div class="line">	putchar(&apos;\n&apos;);</div><div class="line">	&#125;/*the form*/</div><div class="line">	return 0;</div></pre></td></tr></table></figure></p>
-<p><img src="https://github.com/AsherQAQ/AsherQAQ.github.io/blob/master/img/post1-2.png" alt="算法2"></p>
-<p>这两种算法比较之下,发现我在构建循环的时候,思维还是偏数学而非编程.<br>从第二种算法的注释中可以看出,它将这一编程目的分为三部分.</p>
+<p><img src="AsherQAQ.github.io/img/post1-2.png" alt="算法2"><br>这两种算法比较之下,发现我在构建循环的时候,思维还是偏数学而非编程.<br>从第二种算法的注释中可以看出,它将这一编程目的分为三部分.</p>
 <ol>
 <li>首先构建第一行,将1-1位置的空格以及横向标题呈现出来.</li>
 <li>然后是第二行,以for循环将”—“呈现出来并且在构建过程中体现出了格式控制的思想.为了保证两位数和前面的数字间仍有空隙,在构建九九乘法表时将输出<code>printf&quot;%3d&quot;</code>来保证每个数字占三位.因此整个表格加上纵向标题以及”|”应为30位.这一点也是在我自行构建的过程中没有想到的,在完成代码后根据运行的结果进行了多次调整仍然有些偏差.</li>
@@ -118,7 +116,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/05/First Step/" data-id="cj9mnag5i0000lwvwoge9caa5" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/05/First Step/" data-id="cj9mp93do0000zgvwniulbjah" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
