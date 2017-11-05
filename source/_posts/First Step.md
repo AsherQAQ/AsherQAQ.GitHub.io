@@ -38,10 +38,8 @@ int main(void)
 	}
 	putchar('\n');
 ```
-
-最终实现的效果如下图
-
 ![算法1][1]
+最终实现的效果如下图
 
 在完成之后,我去网上搜索这一题,去看看别人的解法
 之后找到一个解法看起来比我的好很多
@@ -64,9 +62,7 @@ int a, b;
 	}/*the form*/
 	return 0;
 ```
-
 ![算法2][2]
-
 这两种算法比较之下,发现我在构建循环的时候,思维还是偏数学而非编程.
 从第二种算法的注释中可以看出,它将这一编程目的分为三部分.
 
@@ -77,5 +73,5 @@ int a, b;
 在这一次的练习中,最后的结果以及代码的逻辑再次让我意识到了编程之美,也是我想构建个人Blog来记录自己学习生活的原因之一.这样的过程值得自己留些纪念.
 
 
-  [1]: https://github.com/AsherQAQ/AsherQAQ.github.io/blob/master/img/post1-1.png
-  [2]: https://github.com/AsherQAQ/AsherQAQ.github.io/blob/master/img/post1-2.png
+  [1]: AsherQAQ.github.io/img/post1-1.png
+  [2]: AsherQAQ.github.io/img/post1-2.png
